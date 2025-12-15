@@ -1,0 +1,63 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0.5);
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#workspaces {
+    background: transparent;
+    margin: 5px;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    border-radius: 8px;
+    color: #cdd6f4;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background: linear-gradient(45deg, #fab387, #a6e3a1);
+    color: #1e1e2e;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: rgba(137, 180, 250, 0.4);
+    color: #cdd6f4;
+}
+
+#workspaces,
+#wlr-taskbar,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#privacy,
+#pulseaudio,
+#backlight,
+#tray,
+#custom-notification,
+#power-profiles-daemon,
+#idle_inhibitor,
+#custom-power {
+    padding: 0px 8px;
+    margin: 0px 2px;
+    border-radius: 10px;
+    background: rgba(30, 40, 40, 0.9);
+    color: #cdd6f4;
+    transition: all 0.3s ease-in-out;
+}

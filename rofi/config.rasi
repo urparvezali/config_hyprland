@@ -1,0 +1,230 @@
+configuration {
+    modi: "drun,run,filebrowser";
+    show-icons: true;
+    icon-theme: "Adwaita-Dark";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-filebrowser: "Files";
+    drun-display-format: "{name}";
+
+    /* Performance */
+    lazy-grab: true;
+    matching: "fuzzy";
+    case-sensitive: false;
+    cycle: true;
+
+    /* Behavior */
+    show-match: true;
+    sort: true;
+    sorting-method: "fzf";
+    disable-history: false;
+
+    /* Keybindings */
+    kb-row-up: "Up,Control+k,Alt+k";
+    kb-row-down: "Down,Control+j,Alt+j";
+    kb-accept-entry: "Return,KP_Enter";
+    kb-remove-to-eol: "";
+    kb-mode-next: "Control+Tab,Alt+Right";
+    kb-mode-previous: "Control+ISO_Left_Tab,Alt+Left";
+    kb-cancel: "Escape,Alt+q,backslash";
+}
+
+* {
+    /* Catppuccin Mocha Colors */
+    bg: #1e1e2e;
+    bg-alt: #313244;
+    bg-selected: #45475a;
+
+    fg: #cdd6f4;
+    fg-alt: #bac2de;
+
+    border: #89b4fa;
+    accent: #89b4fa;
+    urgent: #f38ba8;
+    active: #a6e3a1;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    border: 2px;
+    border-color: @border;
+    border-radius: 10px;
+    padding: 0;
+    location: center;
+    anchor: center;
+    width: 30%;
+}
+
+mainbox {
+    enabled: true;
+    spacing: 0;
+    padding: 0;
+    background-color: transparent;
+    children: [ "inputbar", "message", "listview", "mode-switcher" ];
+}
+
+/* ====== INPUT BAR ====== */
+inputbar {
+    enabled: true;
+    spacing: 12px;
+    padding: 8px;
+    background-color: @bg-alt;
+    text-color: @fg;
+    border-radius: 10px 10px 0 0;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled: true;
+    background-color: transparent;
+    text-color: @accent;
+}
+
+entry {
+    enabled: true;
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+    cursor: text;
+}
+
+/* ====== MESSAGE ====== */
+message {
+    enabled: true;
+    padding: 12px;
+    background-color: @bg-alt;
+    text-color: @fg;
+    border: 0 0 2px 0;
+    border-color: @border;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/* ====== LISTVIEW ====== */
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 10;
+    cycle: true;
+    dynamic: true;
+    scrollbar: true;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+/* ====== ELEMENTS ====== */
+element {
+    enabled: true;
+    spacing: 10px;
+    padding: 5px;
+    background-color: transparent;
+    text-color: @fg;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @bg-selected;
+    text-color: @accent;
+    border: 0 0 0 3px;
+    border-color: @accent;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.urgent {
+    background-color: @urgent;
+    text-color: @bg;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @bg;
+}
+
+element normal.active {
+    background-color: @active;
+    text-color: @bg;
+}
+
+element selected.active {
+    background-color: @active;
+    text-color: @bg;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 24px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/* ====== MODE SWITCHER ====== */
+mode-switcher {
+    enabled: true;
+    spacing: 0px;
+    padding: 0px;
+    background-color: @bg-alt;
+    border-radius: 0 0 10px 10px;
+}
+
+button {
+    padding: 8px 0px;
+    background-color: @bg;
+    text-color: @fg-alt;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+/* ====== SCROLLBAR ====== */
+scrollbar {
+    width: 4px;
+    handle-width: 8px;
+    handle-color: @accent;
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 0;
+}
+
+/* ====== ERROR MESSAGE ====== */
+error-message {
+    padding: 16px;
+    background-color: @urgent;
+    text-color: @bg;
+    border-radius: 16px;
+}
