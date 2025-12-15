@@ -2,11 +2,10 @@
   "height": 30,
   "spacing": 4,
 
-  "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+  "modules-left": ["hyprland/workspaces", "wlr/taskbar", "privacy"],
   "modules-center": [],
   "modules-right": [
     "network",
-    "privacy",
     "memory",
     "cpu",
     "temperature",
@@ -112,7 +111,7 @@
 
   "temperature": {
     "critical-threshold": 70,
-    "format": "{icon} {temperatureC}°C",
+    "format": " {temperatureC}°C",
     "format-icons": ["", "", ""],
     "interval": 2,
   },

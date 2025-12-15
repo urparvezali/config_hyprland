@@ -1,14 +1,13 @@
 * {
     border: none;
-    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
     font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(21, 18, 27, 0.5);
-    color: #cdd6f4;
+    background: rgba(21, 18, 27, 0);
+    color: #ffffff;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
@@ -39,7 +38,7 @@ window#waybar {
 }
 
 #workspaces,
-#wlr-taskbar,
+#taskbar,
 #clock,
 #battery,
 #cpu,
@@ -55,9 +54,9 @@ window#waybar {
 #idle_inhibitor,
 #custom-power {
     padding: 0px 8px;
-    margin: 0px 2px;
-    border-radius: 10px;
-    background: rgba(30, 40, 40, 0.9);
+    margin: 0px 0px;
+    border-radius: 14px;
+    background: rgba(30, 40, 40, 0.5);
     color: #cdd6f4;
     transition: all 0.3s ease-in-out;
 }

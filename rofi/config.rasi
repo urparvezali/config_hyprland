@@ -1,10 +1,10 @@
 configuration {
-    modi: "drun,run,filebrowser";
+    modi: "drun,run,recursivebrowser";
     show-icons: true;
     icon-theme: "Adwaita-Dark";
     display-drun: "Apps";
     display-run: "Run";
-    display-filebrowser: "Files";
+    display-recursivebrowser: "Files";
     drun-display-format: "{name}";
 
     /* Performance */
