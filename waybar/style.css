@@ -16,12 +16,12 @@ window#waybar {
     background: transparent;
     margin: 5px;
     padding: 0px 5px;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 
 #workspaces button {
     padding: 0px 10px;
-    border-radius: 8px;
+    border-radius: 14px;
     color: #cdd6f4;
     transition: all 0.3s ease-in-out;
 }
@@ -69,4 +69,3 @@ window#waybar {
     color: #cdd6f4;
     transition: all 0.3s ease-in-out;
 }
-

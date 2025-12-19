@@ -1,7 +1,6 @@
 {
   "height": 30,
   "spacing": 4,
-
   "modules-left": ["hyprland/workspaces", "wlr/taskbar", "privacy"],
   "modules-center": [],
   "modules-right": [
@@ -19,24 +18,25 @@
     "clock",
     "custom/power",
   ],
-
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "<span size='9pt'>{icon}</span>",
     "on-click": "activate",
     "format-icons": {
-      "1": "󰲠",
-      "2": "󰲢",
-      "3": "󰲤",
-      "4": "󰲦",
-      "5": "󰲨",
-      "6": "󰲪",
-      "7": "󰲬",
-      "8": "󰲮",
-      "9": "󰲰",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
       "urgent": "",
       "default": "",
     },
-    "persistent-workspaces": { "*": 3 },
+    "persistent-workspaces": {
+      "*": 2,
+    },
   },
   "wlr/taskbar": {
     "format": "{icon}",
@@ -53,7 +53,6 @@
       "Foot Server": "Terminal",
     },
   },
-
   "network": {
     "format-wifi": "↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
     "format-ethernet": "↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
@@ -63,7 +62,6 @@
     "tooltip-format-ethernet": "󰈀 {ifname}\n{ipaddr}",
     "interval": 1,
   },
-
   "privacy": {
     "icon-spacing": 4,
     "icon-size": 18,
@@ -102,20 +100,17 @@
     "tooltip-format": "Used: {used:0.1f}G\nTotal: {total:0.1f}G\nSwap: {swapUsed:0.1f}G\nSwap Total: {swapTotal:0.1f}G",
     "interval": 2,
   },
-
   "cpu": {
     "format": " {usage}%",
     "tooltip": true,
     "interval": 1,
   },
-
   "temperature": {
     "critical-threshold": 70,
     "format": " {temperatureC}°C",
     "format-icons": ["", "", ""],
     "interval": 2,
   },
-
   "pulseaudio": {
     "format": "{icon} {volume}% {format_source}",
     "format-bluetooth": "{icon} {volume}% {format_source}",
@@ -134,12 +129,10 @@
     },
     "on-click": "pavucontrol",
   },
-
   "backlight": {
     "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
-
   "idle_inhibitor": {
     "format": "{icon} ",
     "format-icons": {
@@ -147,7 +140,6 @@
       "deactivated": "",
     },
   },
-
   "power-profiles-daemon": {
     "format": "{icon} ",
     "tooltip": true,
@@ -159,30 +151,32 @@
       "power-saver": "",
     },
   },
-
   "battery": {
-    "states": { "warning": 30, "critical": 15 },
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
     "format": "{icon} {capacity}%",
     "format-charging": "⚡ {capacity}%",
     "format-plugged": "⚡ {capacity}%",
     "format-alt": "{icon} {time}",
     "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
   },
-
-  "tray": { "spacing": 12 },
-
+  "tray": {
+    "spacing": 12,
+  },
   "custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
+    "tooltip": true,
+    "format": "<span size='12pt'>{icon}</span>",
     "format-icons": {
-      "notification": "󰂚<span foreground='red'><sup></sup></span>",
-      "none": "󰂚",
-      "dnd-notification": "󰂛<span foreground='red'><sup></sup></span>",
-      "dnd-none": "󰂛",
-      "inhibited-notification": "󰂚<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "󰂚",
-      "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": "󰂛",
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑",
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -191,7 +185,6 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true,
   },
-
   "clock": {
     "format": "{:%H:%M}",
     "format-alt": "󰃭 {:%Y-%m-%d}",
@@ -216,7 +209,6 @@
       "on-scroll-down": "shift_down",
     },
   },
-
   "custom/power": {
     "format": "󰐥",
     "tooltip": false,
